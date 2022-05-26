@@ -304,13 +304,74 @@ nav .navigation ul li a:hover {
 
 #registration a.secondary {
     text-decoration: none;
-    font-size: 0.9rem;
-    padding: 13px 35px;
+    font-size: 1rem;
+    padding: 10px 49px;
     background-color: var(--main-color);
     font-weight: 600;
-    border-radius: 5px;
+    border-radius: 10px;
     color: var(--main-color);
     background-color: var(--main-bg-color);
     transition: var(--transition);
 }
+#registration a.secondary:hover{
+    background-color: #383838;
+    color: var(--main-bg-color);
+}
 
+#contact {
+    padding: 6vw 8vw 6vw 8vw;
+    background-color: #ffffff;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#contact .reminder{
+    color: var(--main-br-color);
+}
+ #contact .reminder h2 {
+     background-color: var(--main-color);
+ }
+.links {
+    margin-top: 0px;
+ }
+.links .fa-facebook {
+    background: #0004ff;
+    color: #ffffff;
+    padding: 10px 13px;
+    border: 0.5px solid #0004ff;
+    cursor: pointer;
+    transition: var(--transition);
+}
+.links .fa-facebook:hover{
+    background-color: var(--main-br-color);
+    color: #0004ff;
+}
+.links .fa-instagram-square {
+    background: #ff00b3;
+    color: #ffffff;
+    padding: 10px 13px;
+    border: 0.5px solid #ff00b3;
+    cursor: pointer;
+    transition: var(--transition);
+}
+.links .fa-instagram-square:hover{
+    background-color: var(--main-br-color);
+    color: #ff00b3;
+}
+.links .fa-youtube {
+    background: #ff0000;
+    color: #ffffff;
+    padding: 10px 13px;
+    border: 0.5px solid #ff0000;
+    cursor: pointer;
+    transition: var(--transition);
+}
+.links .fa-youtube:hover{
+    background-color: var(--main-br-color);
+    color: #ff0000;
+}
