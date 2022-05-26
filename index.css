@@ -97,7 +97,7 @@ nav .navigation ul li a:hover {
     width: auto;
     height: 120vh;
     background-size: cover;
-    background-position: center;
+    background-position: top;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -205,7 +205,7 @@ nav .navigation ul li a:hover {
 /* course */
 
 #courses {
-    padding: 8vw 8vw 0 8vw;
+    padding: 8vw;
     text-align: center;
 }
 
