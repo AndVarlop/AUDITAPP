@@ -4,7 +4,7 @@
    --main-bg-color: white;
    --main-color: #000000;
    --secundary-color: #000000;
-   --transition: 0.3s ease;
+   --transition: 0.5s ease;
 }
 
 * {
@@ -57,7 +57,7 @@ nav .logo {
 }
 
 nav img {
-    width: 70px;
+    width: 80px;
     cursor: pointer;
 }
 
@@ -93,8 +93,8 @@ nav .navigation ul li a:hover {
 
 #home {
     background-image: linear-gradient(rgba(51, 51, 51, 0.2),rgba(0, 0, 0, 0.5)), url("assets/auladeclase.jpg");
-    width: 100%;
-    height: 100vh;
+    width: auto;
+    height: 120vh;
     background-size: cover;
     background-position: center;
     display: flex;
@@ -241,14 +241,20 @@ nav .navigation ul li a:hover {
 #courses .course-item .cost {
     background-color: var(--secundary-color);
     color: white;
-    line-height: 70px;
+    line-height: 65px;
     width: 70px;
-    height: 70px;
+    height: 65px;
     text-align: center;
-    border-radius: 0%;
+    border-radius: 0.3%;
     position: absolute;
     right: 15px;
     bottom: 100px;
+}
+#courses .course-item .cost:hover{
+    background-color: #ffffff;
+    color: #000000;
+    border: 0.5px solid #000000;
+    transition: var(--transition);
 }
 /* registration */
 
@@ -305,9 +311,9 @@ nav .navigation ul li a:hover {
 #registration a.secondary {
     text-decoration: none;
     font-size: 1rem;
-    padding: 10px 49px;
+    padding: 10px 20px;
     background-color: var(--main-color);
-    font-weight: 600;
+    font-weight: 500;
     border-radius: 10px;
     color: var(--main-color);
     background-color: var(--main-bg-color);
@@ -342,19 +348,23 @@ nav .navigation ul li a:hover {
 .links .fa-facebook {
     background: #0004ff;
     color: #ffffff;
-    padding: 10px 13px;
+    padding: 12px 14px;
     border: 0.5px solid #0004ff;
     cursor: pointer;
     transition: var(--transition);
+}
+.links h3 {
+    color: #000000;
+    font-size:x-small;
 }
 .links .fa-facebook:hover{
     background-color: var(--main-br-color);
     color: #0004ff;
 }
 .links .fa-instagram-square {
-    background: #ff00b3;
+    background: #8b0062;
     color: #ffffff;
-    padding: 10px 13px;
+    padding: 12px 14px;
     border: 0.5px solid #ff00b3;
     cursor: pointer;
     transition: var(--transition);
@@ -366,7 +376,7 @@ nav .navigation ul li a:hover {
 .links .fa-youtube {
     background: #ff0000;
     color: #ffffff;
-    padding: 10px 13px;
+    padding: 12px 14px;
     border: 0.5px solid #ff0000;
     cursor: pointer;
     transition: var(--transition);
