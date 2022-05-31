@@ -9,6 +9,7 @@
         <enlace rel="preconectar" href="https://fonts.gstatic.com" crossorigin>
         <enlace href="https: //fonts.googleapis.com/css2? family= Plus+Jakarta+Sans:ital,wght@1,200 & display=swap" rel="stylesheet">
     <link rel="stylesheet" href="index.css">
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
     <title>AUDITAPP</title>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
@@ -18,44 +19,44 @@
     
     <!-- Navigation -->
     <nav>
-        <div class="logo">
-            <img src="assets/logo.png" alt="AUDITAPP">
-            <a title="logo" href="https://andvarlop.github.io/AUDITAPP/#"></a>
+        <div class="logo" >
+            <img src="assets/logo.png" alt="AUDITAPP" >
+            <a title="logo" href="#Home"></a>
             <h1>AUDITAPP</h1>
         </div>
-        
-        <div class="navigation">
-            <ul>
-                <li><a href="#">Home</a> </li>
-                <li><a href="#">lo que ofrecemos</a></li>
-                <li><a href="#">Cursos</a></li>
-                <li><a href="#">Registro</a></li>
-                <li><a href="#">Iniciar Sesión</a></li>
-            </ul>
-        </div>
+        <header class="header" id="inicio">
+            <img src="assets/bx-menu.svg" alt="" class="menu">
+            <nav class="menu-navegacion">
+                <a href="#Home">Home</a>
+                <a href="#Lo que ofrecemos">Lo que ofrecemos</a>
+                <a href="#Cursos">Cursos</a>
+                <a href="#Registro">Registro</a>
+                <a href="#Iniciar Sesión">Iniciar Sesión</a>
+            </nav>
+        </header>
     </nav>
 
     <!-- Home -->
-    <section id="home">
-        <h2>USA AUDITAPP PARA EL MEJOR APRENDIZAJE</h2>
+    <section id="Home">
+        <h2>Confia en nosotros</h2>
         <p>La mejor aplicacion de aprendizaje de lenguaje de señas para personas con problemas auditivos</p>
         <div class="btn">
-            <a href="#" class="primary">Contactanos</a>
+            <a href="#contactanos" class="primary">Contactanos</a>
         </div>
     </section>
 
     <!-- features -->
-    <section id="features">
+    <section class="features" id="Lo que ofrecemos">
         <h1>Lo que ofrecemos</h1>
         <p>Facilitamos el aprendizaje del lenguaje de señas para personas con discapacidad auditiva de una forma didactica y creativa</p>
         <div class="feature-container">
             <div class="feature-box">
-                <i class="fa-solid fa-school"></i>
+                <i class="fa-solid fa-school" id="uno"></i>
                 <h3>Facilidad Escolar</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure cupiditate corporis nesciunt ut a perspiciatis rem praesentium mollitia placeat repellat amet, obcaecati adipisci unde ducimus similique esse animi consequuntur. Nemo?</p>
             </div>
             <div class="feature-box">
-                <i class="fa-solid fa-chalkboard"></i>
+                <i class="fa-solid fa-chalkboard" id="dos"></i>
                 <h3>Aprendizaje Eficaz</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, id nam libero, corporis quam, voluptates temporibus accusantium sit voluptate numquam doloremque sapiente dolores ipsa repellat possimus assumenda delectus repellendus distinctio.</p>
             </div>
@@ -63,12 +64,12 @@
     </section>
 
     <!-- courses -->
-    <section id="courses">
+    <section class="courses" id="Cursos">
         <h1>Nuestros cursos</h1>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis, libero!</p>
         <div class="course-box">
             <div class="course-item">
-                <img src="assets/pexels-ron-lach-10643471.jpg" alt="señoras aprendiendo">
+                <img src="assets/Sin título.png" alt="cursos-de-lenguaje-de-señas">
                 <div class="details">
                     <h6>Curso basico de lenguaje de señas</h6>
                     <div class="star">
@@ -81,11 +82,11 @@
                     </div>
                 </div>
                 <div class="cost">
-                    $15.999
+                    GRATIS
                 </div>
             </div>
             <div class="course-item">
-                <img src="assets/Sin título.png" alt="señoras aprendiendo">
+                <img src="assets/math-1500720.jpg" alt="curso-de-multiplicacion">
                 <div class="details">
                     <h6>Curso basico de multiplicacion</h6>
                     <div class="star">
@@ -94,7 +95,7 @@
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
-                        <span>(73)</span>
+                        <span>(45)</span>
                     </div>
                 </div>
                 <div class="cost">
@@ -108,7 +109,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/js/all.min.js" ></script>
 
  <!-- registration -->
- <section id="registration">
+ <section class="registration" id="Registro">
     <div class="reminder">
         <p>Obten un descuento por promedio a final del curso</p>
         <h1>Resgistrate y dejanos enseñarte de la mejor forma posible</h1>
@@ -125,7 +126,8 @@
     </div>
 </section>
 
-<section id="contact">
+<!-- contactanos -->
+<section class="contact" id="contactanos">
     <div class="reminder">
         <h1>Contactanos</h1>
         <p>Tenemos servicio las 24 horas</p>
@@ -133,18 +135,15 @@
     <div class="form">
         <h2>Nuestras Redes</h2>
         <div class="links">
-                <a class="fa-brands fa-facebook" action="https://www.facebook.com/">
-                </a>
-            <i class="fa-brands fa-instagram-square" href="https://www.instagram.com"><h3>
-                Instagram
-            </h3></i>
-            <i class="fa-brands fa-youtube" href="https://www.youtube.com"><h3>
-                Youtube
-            </h3></i>
+            <i class="fa-brands fa-facebook" href="https://www.facebook.com" ></i>
+            <i class="fa-brands fa-instagram-square" href="https://www.instagram.com"></i>
+            <i class="fa-brands fa-youtube" href="https://www.youtube.com"></i>
           </div>
         
     </div>
 </section>
+
+<script src="js/menu.js"></script>
 
 </body>
 </html>

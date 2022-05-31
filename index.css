@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
 :root {
+    scroll-behavior: smooth;
    --main-bg-color: white;
    --main-color: #000000;
    --secundary-color: #000000;
@@ -90,14 +91,68 @@ nav .navigation ul li a:hover {
     color: var(--secundary-color);
 }
 
+nav .header img {
+    width: 40px;
+    border-radius: 10px;
+    background-color: #ffffff;
+}
+
+nav .header .menu{
+    position: fixed;
+    /*z-index: 1000;*/
+    top: 30px;
+    right: 30px;
+    background-color: #ffffff;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    border-radius: 10px;
+    box-shadow: 0 0 6px rgb(0, 0, 0, 0.15);
+}
+
+nav .header .menu-navegacion{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 30vw;
+    height: 110%;
+    background-image: linear-gradient(to left, #BDBBBE 0%, #9D9EA3 100%), radial-gradient(88% 271%, rgba(255, 255, 255, 0.25) 0%, rgba(254, 254, 254, 0.25) 1%, rgba(0, 0, 0, 0.25) 100%), radial-gradient(50% 100%, rgba(255, 255, 255, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%);
+    background-blend-mode: normal, lighten, soft-light;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    transition: transform .3s ease-in-out;
+    transform: translate(110%);
+    box-shadow: 0 0 6px rgb(0, 0, 0, 0.5);
+}
+
+nav .header .spread{
+    transform: translate(0);
+}
+
+nav .menu-navegacion a{
+    color: #ffffff;
+    text-decoration: none;
+}
+
+/*body:hover .menu-navegacion{
+    transform: translate(120%);
+}Esto es para algo bueno del menu*/
+
 /* Home */
 
-#home {
-    background-image: linear-gradient(rgba(51, 51, 51, 0.2),rgba(0, 0, 0, 0.5)), url("assets/auladeclase.jpg");
-    width: auto;
-    height: 120vh;
+#Home {
+    height: 100vh;
+    background-image: linear-gradient(15deg, #13547a60 0%, #80d0c759 100%), url("assets/auladeclase.jpg");
+    object-fit: cover;
+    background-repeat: no-repeat;
     background-size: cover;
-    background-position: top;
+    background-attachment: fixed;
+    background-position: center;
+    object-fit: cover;
+    border-radius: 10px;
+    width: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -106,24 +161,24 @@ nav .navigation ul li a:hover {
     padding-top: 40px;
 }
 
-#home h2 {
+#Home h2 {
     color: var(--main-bg-color);
     font-size: 2.2rem;
     letter-spacing: 1px;
 }
 
-#home p {
+#Home p {
     width: 50%;
     color: var(--main-bg-color);
     font-size: 0.9rem;
     line-height: 25px;
 }
 
-#home .btn {
+#Home .btn {
     margin-top: 30px;
 }
 
-#home a {
+#Home a {
     text-decoration: none;
     font-size: 0.9rem;
     padding: 13px 35px;
@@ -132,158 +187,161 @@ nav .navigation ul li a:hover {
     border-radius: 5px;
 }
 
-#home a.primary {
+#Home a.primary {
     color: var(--main-bg-color);
     background-color: var(--main-color);
     transition: var(--transition);
 }
 
-#home a.primary:hover {
+#Home a.primary:hover {
     color: var(--main-color);
     background-color: var(--main-bg-color);
 }
 
-#home a.secondary {
+#Home a.secondary {
     color: var(--main-bg-color);
     background-color: var(--secundary-color);
     transition: var(--transition);
 }
 
-#home a.secondary:hover {
+#Home a.secondary:hover {
     color: var(--secundary-color);
     background-color: var(--main-bg-color);
 }
 
 /* features */
 
-#features {
+.features {
     padding: 5vw 8vw 0 8vw;
     text-align: center;
 }
 
-#features .feature-container {
+.features .feature-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    justify-content: center;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 0.3fr));
     grid-gap: 1rem;
     margin-top: 50px;
+    flex-wrap: wrap;
 }
 
-#features .feature-box {
-    background: #e6e6eb;
-    text-align: start;
-    padding: 15px;
+.features .feature-container .feature-box {
+    background-image: linear-gradient(15deg, #13547a7e 0%, #80d0c7 100%);
+    text-align: center;
+    padding: 20px;
 }
 
-#features .feature-box .fa-graduation-cap {
-    font-size: 2.3rem;
+.features .feature-container .feature-box #uno {
+    font-size: 2rem;
     color: #000000;
 }
 
-#features .feature-box .fa-award {
-    font-size: 2.3rem;
+.features .feature-container .feature-box #dos {
+    font-size: 2rem;
     color: #000000;
+
 }
 
-#features .feature-box .fa-chalkboard-user {
-    font-size: 2.3rem;
-    color: #000000;
-}
-
-#features .feature-box h3 {
-    font-size: 1.2rem;
+.features .feature-box h3 {
+    font-size: 1.3rem;
     font-weight: 600;
     color: rgb(46, 46, 59);
-    padding: 13px 0 7px 0;
+    padding: 12px 0 7px 0;
 }
 
-#features .feature-box p {
+.features .feature-box p {
     font-size: 1rem;
     font-weight: 400;
-    color: #757373;
+    color: #ffffff;
+    
 }
 
 /* course */
 
-#courses {
+.courses {
     padding: 8vw;
     text-align: center;
 }
 
-#courses .course-box {
+.courses .course-box {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(320px, 0.4fr));
     grid-gap: 1rem;
-    margin-top: 20px;
+    margin-top: 50px;
+    justify-content: center;
 }
 
-#courses .course-item {
+.courses .course-item {
     text-align: start;
-    background: #e6e6eb;
+    background-image: linear-gradient(15deg, #13547a7e 0%, #80d0c7 100%);
     height: 100%;
     position: relative;
 }
 
-#courses .course-item img {
+.courses .course-item img {
     width: 100%;
     height: 60%;
     background-size: cover;
     background-position: center;
 }
 
-#courses .course-item .details {
+.courses .course-item .details {
     padding: 15px 15px 0 15px;
 }
 
-#courses .course-item .details .fa-star {
+.courses .course-item .details .fa-star {
     color: #FDC93B;
-    font-size: .9rem;
+    font-size: 1rem;
 }
 
-#courses .course-item .cost {
-    background-color: var(--secundary-color);
-    color: white;
+.courses .course-item .cost {
+    background-image: linear-gradient(to right, #434343 0%, black 100%);    color: white;
     line-height: 65px;
-    width: 70px;
-    height: 65px;
+    width: 80px;
+    height: 70px;
     text-align: center;
-    border-radius: 0.3%;
+    border-radius: 20%;
+    border: 0.5px solid #000000;
     position: absolute;
     right: 15px;
     bottom: 100px;
+    cursor: pointer;
 }
-#courses .course-item .cost:hover{
-    background-color: #ffffff;
-    color: #000000;
+.courses .course-item .cost:hover{
+    background-color: #E4E4E1;
+    background-image: radial-gradient(at top center, rgba(255,255,255,0.03) 0%, rgba(0,0,0,0.03) 100%), linear-gradient(to top, rgba(255,255,255,0.1) 0%, rgba(143,152,157,0.60) 100%);
+    background-blend-mode: normal, multiply;    color: #000000;
     border: 0.5px solid #000000;
     transition: var(--transition);
 }
 /* registration */
 
-#registration {
+.registration {
+    display: flex;
     padding: 6vw 8vw 6vw 8vw;
     background-color: #000000;
     width: 100%;
     height: 100%;
     background-size: cover;
     background-position: center;
-    display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-#registration .reminder {
+.registration .reminder {
     color: var(--main-bg-color);
 }
 
-#registration .reminder h1 {
+.registration .reminder h1 {
+    font-size: 30px;
     color: var(--main-bg-color);
 }
 
-#registration h3 {
+.registration h3 {
     color: var(--main-bg-color);
 }
 
-#registration .form {
+.registration .form {
     background: var(--main-color);
     border-radius: 8px;
     display: flex;
@@ -292,24 +350,28 @@ nav .navigation ul li a:hover {
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
 }
 
-#registration .form input {
+.registration .form input {
     margin: 15px 0;
     padding: 15px 10px;
     border: 1px solid var(--main-bg-color);
     outline: none;
 }
 
-#registration .form input::placeholder {
+.registration .form input::placeholder {
     color: var(--main-color);
     font-weight: 500;
     font-size: 0.9rem;
 }
 
-#registration .form .btn {
-    margin-top: 20px;
+.registration .form .btn {
+    margin-top: 40px;
+    background-size: cover;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
 }
 
-#registration a.secondary {
+.registration a.secondary {
     text-decoration: none;
     font-size: 1rem;
     padding: 10px 20px;
@@ -320,39 +382,41 @@ nav .navigation ul li a:hover {
     background-color: var(--main-bg-color);
     transition: var(--transition);
 }
-#registration a.secondary:hover{
+.registration a.secondary:hover{
     background-color: #383838;
     color: var(--main-bg-color);
 }
 
-#contact {
+.contact {
+    display: flex;
     padding: 6vw 8vw 6vw 8vw;
-    background-color: #ffffff;
+    background-image: linear-gradient(15deg, #13547a7e 0%, #80d0c7 100%);
     width: 100%;
     height: 100%;
     background-size: cover;
     background-position: center;
-    display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-#contact .reminder{
+.contact .reminder{
     color: var(--main-br-color);
 }
- #contact .reminder h2 {
+.contact .reminder h2 {
      background-color: var(--main-color);
  }
 .links {
-    margin-top: 0px;
+    margin-top: 20px;
+    border-radius: 10px;
  }
 .links .fa-facebook {
     background: #0004ff;
     color: #ffffff;
     padding: 12px 14px;
-    border: 0.5px solid #0004ff;
+    background-image: linear-gradient(15deg, #13547a7e 0%, #80d0c7 100%);
     cursor: pointer;
     transition: var(--transition);
+    border-radius: 10px;
 }
 .links h3 {
     color: #000000;
@@ -363,12 +427,13 @@ nav .navigation ul li a:hover {
     color: #0004ff;
 }
 .links .fa-instagram-square {
-    background: #8b0062;
+    background: #ff00b3;
     color: #ffffff;
     padding: 12px 14px;
-    border: 0.5px solid #ff00b3;
+    background-image: linear-gradient(15deg, #13547a7e 0%, #80d0c7 100%);
     cursor: pointer;
     transition: var(--transition);
+    border-radius: 10px;
 }
 .links .fa-instagram-square:hover{
     background-color: var(--main-br-color);
@@ -378,11 +443,136 @@ nav .navigation ul li a:hover {
     background: #ff0000;
     color: #ffffff;
     padding: 12px 14px;
-    border: 0.5px solid #ff0000;
+    background-image: linear-gradient(15deg, #13547a7e 0%, #80d0c7 100%);
     cursor: pointer;
     transition: var(--transition);
+    border-radius: 10px;
 }
 .links .fa-youtube:hover{
     background-color: var(--main-br-color);
     color: #ff0000;
+}
+
+@media screen and (max-width:800px) {
+    nav .header .menu-navegacion {
+        width: 45vw;
+    }
+    .registration .form {
+        background: var(--main-color);
+        border-radius: 8px;
+        display: flex;
+        flex-direction: column;
+        padding: 40px;
+        box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    }
+
+    .registration {
+        display: grid;
+    }
+    
+    .registration .reminder p{
+    background-size: cover;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    }
+
+    .registration .reminder h1 {
+        margin-top: 20px;
+        background-size: cover;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+    
+    .registration h3 {
+        display: grid;
+        background-size: cover;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+    .registration .form .btn{
+        margin-top: 40px;
+        background-size: cover;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .contact {
+        height: 90vh;
+        background-size: cover;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        
+    }
+    .contact .reminder{
+        margin-bottom: 40px;
+    }
+}
+
+@media screen and (max-width:500px) {
+    nav .header .menu-navegacion {
+        width: 65vw;
+    }
+
+    .registration {
+        width: 46.5vh;
+        display: grid;
+    }
+
+    .registration .form {
+        background: var(--main-color);
+        border-radius: 8px;
+        display: flex;
+        flex-direction: column;
+        padding: 40px;
+        box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    }
+    
+    .registration .reminder p{
+    background-size: cover;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    }
+
+    .registration .reminder h1 {
+        margin-top: 20px;
+        background-size: cover;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+    
+    .registration h3 {
+        background-size: cover;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+    .registration .form .btn{
+        margin-top: 40px;
+        background-size: cover;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .contact {
+        height: 90vh;
+        width: 46.5vh;
+        background-size: cover;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        
+    }
+    .contact .reminder{
+        margin-bottom: 40px;
+    }
+
+
 }
